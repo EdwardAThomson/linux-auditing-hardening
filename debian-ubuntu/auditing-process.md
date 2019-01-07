@@ -34,7 +34,7 @@ x='() { :;}; echo "***WARNING: BASH VULNERABLE TO SHELLSHOCK"' bash -c :
 
 
 
-# System Authentication and access
+# System Authentication and Access
 ## Check for weak passwords
 You should know if you are using weak passwords on your own system. There are a couple checks you can do to get an indication on someone else's system. If you have root privileges then you could look into the shadow file for signs of weak hashes, and you can also attempt to crack the hashes. If you don't have a shadow file then you problems! Passwords shouldn't be reused across systems either: e.g. login passwords should be different for each machine.
 
@@ -245,9 +245,11 @@ ls -al /home
 
 ### Check for nouser/ nogroup
 Check if there are any files or directories owned by 'nouser' / 'nogroup'.
+
+```
 find / -nouser -ls
 find / -nogroup -ls
-
+```
 
 
 ## Network Config
